@@ -1,0 +1,35 @@
+.scrh1 {
+  font-weight: bolder;
+    color: white;
+    background-color: rgb(51, 204, 202);
+    border-radius: 24px;
+    display: block;
+    text-decoration: none;
+    margin-top: 2%;
+    margin-bottom: 4%;
+  }
+
+.main{
+  overflow-y: auto;
+}
+.games div{
+  display: block;
+  border: 2px black double;
+}
+.game {
+  /*display: none;*/
+  height: 72%;
+  border: 2px black double;
+}
+.game h2 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 48px;
+  background-color: #092c5d;
+  color: white;
+
+}
+.game p {
+  text-align: left;
+  margin-left: 8px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App JIM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav" id="sidebar">
+        <img src="LogoMarista.png" alt="Logo Marista" class="logo" id="toggleBtn">
+        <div class="links">
+            <a href="time.html">Tabela</a>
+            <a href="rules.html">Regras</a>
+            <a href="scoreboard.html">Placar</a>
+            <a href="historic.html">Histórico</a>
+            <a href="summary.html">Súmula</a>
+            <button onclick="toggleChat()">Inserir Penalidade</button> <!-- Botão para ativar o chat -->
+        </div>
+    </div>
+
+    <div class="main" id="main">
+        <h1 style="font-size: 32px;">Histórico</h1>
+        <div class="hist">
+            <p>
+                <span class="time">[<span class="time hour">11</span>:<span class="time minute">38</span>]</span> <span class="class">1ºA</span> - <span class="penalty"> Penalidade de 18 pontos </span> - <u class="rulecode">C08</u>
+            </p>
+            <!-- Mais itens de histórico aqui -->
+        </div>
+
+        <!-- Campo de entrada para o chat -->
+        <div class="chat-input" id="chatArea">
+            <button onclick="sendMessage()" disabled>Inserir</button> <!-- Inicialmente desativado -->
+            <!-- Adicionando turmas -->
+            <div class="turma-select">
+                <select id="turmaSelect">
+                    <option value="1">1ºA</option>
+                    <option value="2">1ºB</option>
+                    <option value="3">1ºC</option>
+                    <option value="1">2ºA</option>
+                    <option value="1">2ºB</option>
+                    <option value="2">3ºA</option>
+                    <option value="3">3ºB</option>
+                </select>
+            </div>
+            <!-- Adicionando códigos -->
+            <div class="codigo-select">
+                <select id="codigoSelect">
+                    <option value="C01">C01</option>
+                    <option value="C02">C02</option>
+                    <option value="C03">C03</option>
+                    <option value="C04">C04</option>
+                    <option value="C05">C05</option>
+                    <option value="C06">C06</option>
+                    <option value="C07">C07</option>
+                    <option value="C08">C08</option>
+                    <option value="C09">C09</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" defer> </script>
+<!--... (rest of the HTML remains the same)... -->
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App JIM</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js" defer> </script>
+</head>
+<body>
+    <div class="sidenav" id="sidebar">
+        <img src="../LogoMarista.png" alt="Logo Marista" class="logo" id="toggleBtn">
+        <div class="links">
+            <a href="../time.html">Tabela</a>
+            <a href="../rules.html">Regras</a>
+            <a href="../scoreboard.html">Placar</a>
+            <a href="../historic.html">Histórico</a>
+            <a href="../summary.html">Súmula</a>
+        </div>
+    </div>
+    
+        <div class="main">
+            <div class="scr1" id="scr1a">
+                <div class="team1 tm" id="db">
+                    <a href="../scoreboard.html">2º B</a>
+                    <div class="tsumarry">
+                        <div class="tpos" id="interno">5º</div>
+                        <div class="twin"></div>
+                    </div>
+                    <div class="pts1">
+                        <div class="tscr">200</div>
+                        <div class="tplt">200</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+    </html>
+
+    <style>
+        body {
+            overflow: auto;
+        }
+        .team1 {
+            background-color: rgb(255, 0, 0);
+            padding: 5px;
+            margin: 5px;
+            border-radius: 5vh;
+            height: 90vh;
+        }
+
+        .team1 a {
+            color: #000000;
+            margin-top: 0px;
+            padding-top: 0px;
+            font-weight: bolder;
+            font-size: 64px;
+            display: block;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #092c5d;
+        }
+
+        #scr1a {
+            height: 100%;
+        }
+        .team1 div {
+            display: inline-block;
+        }
+        .tsumarry div {
+            display: block;
+        }
+    </style>
+</head>

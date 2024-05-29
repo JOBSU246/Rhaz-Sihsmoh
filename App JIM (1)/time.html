@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App JIM</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*.content {
+            width: 98%;
+            height: 95%;
+        }
+        .title {
+            position: relative;
+            display: block;
+            text-align: center;
+            right: 0%;
+            width: 100%;
+            font-size: 50px;
+        }
+        .sidenav {
+            width: 200px;
+            transition: width 0.5s ease;
+            overflow-x: hidden;
+        }
+        .sidenav.collapsed {
+            width: 40px;
+        }
+        .sidenav.collapsed a {
+            display: none;
+        }
+        .main.collapsed {
+            margin-left: 20px;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="sidenav" id="sidebar">
+        <img src="LogoMarista.png" alt="Logo Marista" class="logo" id="toggleBtn">
+        <div class="links">
+            <a href="time.html">Tabela</a>
+            <a href="rules.html">Regras</a>
+            <a href="scoreboard.html">Placar</a>
+            <a href="historic.html">Histórico</a>
+            <a href="summary.html">Súmula</a>
+        </div>
+    </div>
+
+    <div class="main" id="main">
+        <embed src="tabela  JIM 2023 - NS Penha nap 4.pdf" type="application/pdf" class="content" id="time">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

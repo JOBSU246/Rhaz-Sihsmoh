@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App JIM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidenav" id="sidebar">
+        <img src="LogoMarista.png" alt="Logo Marista" class="logo" id="toggleBtn">
+        <div class="links">
+            <a href="time.html">Tabela</a>
+            <a href="rules.html">Regras</a>
+            <a href="scoreboard.html">Placar</a>
+            <a href="historic.html">Histórico</a>
+            <a href="summary.html">Súmula</a>
+        </div>
+    </div>
+
+    <div class="main">
+        <h1 style="font-size: 50px;">Tabela de Pontuações</h1>
+        <div class="scr1">
+            <div class="teamblock" id="teamblock">
+                <div class="team tm" id="ua">
+                    <a href="scoreboard/1a.html">1º A</a>
+                    <div class="tpos">1º</div>
+                    <div class="pts">
+                        <div class="tscr" id="ua">324</div>
+                        <div class="tplt">162</div>
+                    </div>
+                </div>
+                <div class="team tm" id="ub">
+                    <a href="scoreboard/1b.html">1º B</a>
+                    <div class="tpos">2º</div>
+                    <div class="pts">
+                        <div class="tscr" id="ub">300</div>
+                        <div class="tplt">150</div>
+                    </div>
+                </div>
+                <div class="team tm" id="uc">
+                    <a href="scoreboard/1c.html">1º C</a>
+                    <div class="tpos">3º</div>
+                    <div class="pts">
+                        <div class="tscr" id="uc">290</div>
+                        <div class="tplt">160</div>
+                    </div>
+                </div>
+                <div class="team tm" id="da">
+                    <a href="scoreboard/2a.html">2º A</a>
+                    <div class="tpos">4º</div>
+                    <div class="pts">
+                        <div class="tscr" id="da">225</div>
+                        <div class="tplt">75</div>
+                    </div>
+                </div>
+                <div class="team tm" id="db">
+                    <a href="scoreboard/2b.html">2º B</a>
+                    <div class="tpos">5º</div>
+                    <div class="pts">
+                        <div class="tscr" id="db">200</div>
+                        <div class="tplt">200</div>
+                    </div>
+                </div>
+                <div class="team tm" id="ta">
+                    <a href="scoreboard/3a.html">3º A</a>
+                    <div class="tpos">6º</div>
+                    <div class="pts">
+                        <div class="tscr" id="ta">150</div>
+                        <div class="tplt">50</div>
+                    </div>
+                </div>
+                <div class="team tm" id="tb">
+                    <a href="scoreboard/3b.html">3º B</a>
+                    <div class="tpos">7º</div>
+                    <div class="pts">
+                        <div class="tscr" id="tb">69</div>
+                        <div class="tplt">0</div>
+                    </div>
+                </div>
+                <!-- Adicione mais equipes conforme necessário -->
+            </div>
+        </div>
+    </div>
+    <script>
+        function updatePosition() {
+            // Seleciona todas as equipes
+            const teams = Array.from(document.querySelectorAll('.team.tm'));
+
+            // Ordena as equipes com base no valor de tscr
+            teams.sort((a, b) => {
+                const scoreA = parseInt(a.querySelector('.tscr').textContent);
+                const scoreB = parseInt(b.querySelector('.tscr').textContent);
+                return scoreB - scoreA;
+            });
+
+            // Atualiza a posição de cada equipe
+            teams.forEach((team, index) => {
+                team.querySelector('.tpos').textContent = (index + 1) + 'º';
+                document.getElementById('teamblock').appendChild(team);
+            });
+        }
+
+        // Adiciona um evento de clique aos elementos com a classe "tscr"
+        const tscrElements = document.querySelectorAll('.tscr');
+        tscrElements.forEach(element => {
+            element.addEventListener('click', () => {
+                // Abre um prompt para editar o valor
+                const newValue = prompt('Digite o novo valor:');
+                // Atualiza o valor se não for cancelado
+                if (newValue !== null) {
+                    element.textContent = newValue;
+                    updatePosition();
+                }
+            });
+        });
+
+        // Atualiza a posição inicial
+        updatePosition();
+    </script>
+    <script src="script.js" defer> </script>
+</body>
+</html>
